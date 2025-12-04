@@ -20,3 +20,33 @@ Install the necessary command-line tools:
 
 🚀 Recommended Installation Method (Go)
 Most of these tools are written in Go. If you have Go installed and configured (ensure your $GOPATH/bin is in your system's $PATH), you can install them using these commands:
+________________________________________________________________________________________________________________________________
+**crt.sh**
+
+# 🔎 Subdomain Enumeration via Certificate Transparency Logs
+
+This project provides a simple script to **enumerate subdomains** of a target domain by querying **Certificate Transparency (CT) logs** from [crt.sh](https://crt.sh) and [Certspotter](https://certspotter.com).  
+It is designed for penetration testers, bug bounty hunters, and security researchers who want to automate reconnaissance.
+
+---
+
+## ✨ Features
+- **Automated CT log queries** from crt.sh and Certspotter
+- **Deduplication** of results for clean output
+- **Flexible integration** into larger recon pipelines
+- **Simple CLI usage** with minimal dependencies
+- **Output ready** for chaining into tools like `dnsx`, `httpx`, `nuclei`, or `nmap`
+
+---
+
+## ⚙️ Prerequisites
+- Python 3.7+
+- `requests` library (`pip install requests`)
+
+---
+
+## 🚀 Usage
+
+```bash
+python subdomain_enum.py example.com
+
